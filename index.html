@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Lautaro Waltersdorf" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./logo.svg" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Diseño Web Profesional y Personalizado | W Diseño Web</title>
+    <meta
+      name="description"
+      content="Desarrollamos sitios web atractivos y funcionales, adaptados a tus necesidades. ¡Haz que tu presencia online destaque!"
+    />
+  </head>
+  <body>
+    <div class="transition-slideIn"></div>
+    <nav class="navBar">
+      <h1 class="brand">Walter Burgers</h1>
+      <div class="nav">
+        <a href="/" id="home" class="navItem">Home</a>
+        <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
+      </div>
+    </nav>
+    <main id="swup">
+      <div class="heroSection">
+        <h1 class="heroTitle">BURGER</h1>
+        <div class="imgAndTextContainer">
+          <div class="imgContainer">
+            <img class="heroImg" src="./img/hero.png" alt="Burger" />
+            <span class="imgShadow"></span>
+            <span class="imgText">Mega</span>
+          </div>
+          <div class="textContainer">
+            <p class="heroSubtitle">¡2x1 en Classic Burgers!</p>
+            <a href="/#menu">
+              <button class="button">Ver Menú ➤</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="textBackground">
+        <div class="textRow">
+          <span class="word"></span>
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <h2>Promociones</h2>
+        <div
+          class="atropos myAtropos menuCard"
+          onclick="document.getElementById('mega').showModal();"
+        >
+          <div class="atropos-scale">
+            <div class="atropos-rotate">
+              <div class="atropos-inner">
+                <h3 class="itemTitle">Combo Mega</h3>
+                <p class="itemDiscount">2x1</p>
+                <img
+                  class="soda"
+                  src="./img/soda.png"
+                  alt="bebida"
+                  data-atropos-offset="-5"
+                />
+
+                <img class="hamburger" src="./img/Hero.png" />
+                <img
+                  class="fries"
+                  src="./img/fries.png"
+                  alt="papas fritas"
+                  data-atropos-offset="-5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <dialog id="mega" class="dialogDescription">
+          <h4 class="brand">Combo Mega</h4>
+          <div class="dialogContent">
+            <img src="./img/Hero.png" alt="hamburguesa" />
+            <p class="dialogText">
+              Esta creación comienza con una jugosa mezcla de carne vacuna y
+              pollo, perfectamente sazonada y a la parrilla.<br /><br />La
+              hamburguesa se enriquece con una generosa capa de queso cheddar
+              fundido, cada bocado se complementa con crujiente panceta, que
+              aporta un toque salado y una textura crujiente en contraste con la
+              suavidad de la carne.<br /><br />La frescura de la lechuga y el
+              tomate, junto con la cebolla caramelizada, proporcionan un balance
+              perfecto entre frescura y dulzura. Todo esto se une con una suave
+              y rica mayonesa que realza cada ingrediente con su cremosidad.
+              Servida en un pan artesanal ligeramente tostado.
+            </p>
+          </div>
+          <button
+            class="button"
+            onclick="document.getElementById('mega').close();"
+          >
+            Volver
+          </button>
+        </dialog>
+      </div>
+      <footer class="footer">
+        <h1 class="brand">Walter Burgers</h1>
+        <p>
+          Sitio Web Creado Por
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://wdiseñoweb.com"
+            >W Diseño Web</a
+          >
+        </p>
+      </footer>
+    </main>
+    <!-- atropos css -->
+    <link rel="stylesheet" href="./atropos.css" />
+    <!-- Swup -->
+    <script src="./Swup.umd.js"></script>
+    <script type="module">
+      //swup
+      const swup = new Swup();
+      //atropos
+      import Atropos from "./atropos.min.mjs";
+      //dinamic style nav
+      const setStyle = (url = window.location.pathname) => {
+        url === "/"
+          ? document.getElementById("home").classList.add("active")
+          : document.getElementById("home").classList.remove("active");
+        url === "/about.html"
+          ? document.getElementById("about").classList.add("active")
+          : document.getElementById("about").classList.remove("active");
+      };
+      //swup hooks
+      setStyle();
+      const setAtropos = () => {
+        const myAtropos = Atropos({
+          el: ".myAtropos",
+          shadow: true,
+          highlight: false,
+          rotateXMax: 10,
+          rotateYMax: 10,
+        });
+      };
+      setAtropos();
+      swup.hooks.on("page:view", (visit) => {
+        setStyle(visit.to.url);
+        if (visit.to.url === "/") setAtropos();
+      });
+    </script>
+  </body>
+</html>

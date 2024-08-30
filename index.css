@@ -1,0 +1,470 @@
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Brand";
+  src: url("fonts/KaushanScript-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Main";
+  src: url("fonts/Inter_18pt-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Main";
+  src: url("fonts/Inter_18pt-Bold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  font-family: "Main", sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+:root {
+  --color-main: #c12d00;
+  --color-highlight: #ffe355;
+  --color-text: white;
+  --shadow: -5px 5px 7px rgba(0, 0, 0, 0.3);
+  --16px: 1rem;
+  --20px: 1.25rem; /* Mobile */
+  --24px: 1.5rem;
+  --32px: 2rem;
+  --40px: 2.5rem; /* Mobile */
+  --48px: 3rem;
+  --64px: 4rem;
+  --80px: 5rem;
+  --96px: 6rem;
+  --192px: 12rem;
+  --384px: 24rem;
+  --768px: 48rem;
+  --1152px: 72rem;
+}
+body::-webkit-scrollbar {
+  width: var(--16px);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-main);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-text);
+  border-radius: var(--16px);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--color-4) var(--color-3);
+  }
+}
+/* page transitions */
+.transition-slideIn {
+  opacity: 0;
+  position: fixed;
+  top: calc(50% - 50px);
+  left: calc(50vw - 50px);
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  z-index: 2;
+  border-radius: 50%;
+  transition: all 0.8s ease-in-out;
+  transform: scale(0%);
+}
+html.is-animating .transition-slideIn {
+  opacity: 1;
+  transform: scale(3000%);
+}
+html.is-rendering .transition-slideIn {
+  opacity: 1;
+  transform: scale(0%);
+}
+@media only screen and (max-width: 750px) {
+  html.is-animating .transition-slideIn {
+    transition: transform 0.3s ease-in-out;
+  }
+  html.is-rendering .transition-slideIn {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--80px);
+  width: calc(100% - var(--32px) * 2);
+  padding: 0 var(--32px);
+  position: fixed;
+}
+.brand {
+  font-family: "Brand";
+  font-size: var(--32px);
+  color: var(--color-text);
+  text-shadow: var(--shadow);
+  font-weight: 400;
+  text-align: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--32px);
+}
+.navItem {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text);
+  text-shadow: var(--shadow);
+  font-size: var(--24px);
+}
+.navItem:hover {
+  color: var(--color-highlight);
+}
+.active {
+  text-decoration: underline;
+  color: var(--color-highlight);
+}
+/* Hero */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--color-main);
+  width: 100%;
+  max-width: 1920px;
+  padding-top: var(--80px);
+  height: calc(100vh - var(--64px) - var(--80px));
+  height: calc(100svh - var(--64px) - var(--80px));
+  max-height: 1200px;
+  overflow: hidden;
+  gap: var(--24px);
+}
+.heroTitle {
+  color: var(--color-text);
+  text-shadow: var(--shadow);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 15rem;
+  font-size: 20rem;
+  margin: 0;
+  margin-left: 30%;
+  margin-bottom: -16rem;
+}
+.imgAndTextContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+.imgContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.heroImg {
+  margin: var(--64px);
+  margin-bottom: var(--20px);
+}
+.imgText {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  transform: rotate(-20deg);
+  z-index: 1;
+  font-size: var(--96px);
+  font-family: "Brand";
+  color: var(--color-highlight);
+}
+.imgShadow {
+  background-color: rgba(0, 0, 0, 0.454);
+  width: 70%;
+  height: var(--32px);
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+}
+.textContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  height: 70%;
+  flex-direction: column;
+}
+.heroSubtitle {
+  font-size: var(--32px);
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0;
+  color: var(--color-text);
+  text-shadow: var(--shadow);
+  margin-bottom: var(--32px);
+}
+.button {
+  background-color: var(--color-highlight);
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: #422800 7px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: var(--24px);
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button:hover {
+  background-color: var(--color-text);
+}
+.button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+.button:focus {
+  outline: none;
+}
+@media only screen and (max-width: 700px) {
+  .titleHero {
+    font-size: var(--48px);
+  }
+  .subtitleHero {
+    font-size: var(--20px);
+  }
+  .buttonHero {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .titleHero {
+    font-size: var(--40px);
+  }
+}
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background-color: var(--color-main);
+  height: 100vh;
+}
+.menu h2 {
+  margin: 0;
+}
+.menuCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: var(--64px);
+  border: 2px solid var(--color-text);
+  padding: var(--16px);
+  overflow: hidden;
+  cursor: pointer;
+}
+.itemTitle {
+  font-size: var(--48px);
+  font-family: "Brand";
+  margin: 0;
+}
+.atropos-shadow {
+  background-color: rgba(0, 0, 0, 0.356) !important;
+  position: relative !important;
+  margin-top: -70px;
+  height: 100px !important;
+  border-radius: 50%;
+}
+.atropos-inner {
+  overflow: visible !important;
+}
+.itemDiscount {
+  font-size: var(--32px);
+  font-family: "Main";
+  font-weight: 600;
+  margin: 0;
+}
+.hamburger {
+  height: 250px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+  margin: 0 -150px;
+  margin-bottom: -40px;
+}
+.soda {
+  height: 450px;
+}
+.fries {
+  height: 350px;
+}
+.dialogDescription {
+  background-color: transparent;
+  border-radius: var(--16px);
+  text-align: left;
+  border: none;
+}
+.dialogDescription .brand {
+  margin: 0;
+  font-size: var(--48px);
+}
+.dialogDescription::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.dialogContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: var(--48px);
+}
+.dialogText {
+  color: var(--color-highlight);
+  font-size: var(--24px);
+  font-weight: 400;
+  margin: 0;
+  width: 40%;
+}
+.dialogDescription .button {
+  position: absolute;
+  top: 0;
+  left: var(--64px);
+}
+/* text slide */
+.textBackground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  height: var(--64px);
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  color: var(--color-text);
+  background-color: black;
+}
+.textRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--32px);
+  font-weight: 600;
+  text-transform: uppercase;
+  width: var(--192px);
+  -webkit-animation: slide 20s linear alternate infinite;
+  animation: slide 20s linear alternate infinite;
+}
+.word:after {
+  content: "Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers •";
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .textRow {
+    font-size: var(--32px);
+  }
+}
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--192px));
+  color: var(--color-text);
+  background-color: var(--color-main);
+}
+.aboutTitle {
+  font-family: "Brand";
+  font-weight: 400;
+  font-size: var(--48px);
+}
+.aboutText {
+  font-size: var(--24px);
+  font-weight: 400;
+  margin: 0;
+  width: 60%;
+  text-align: left;
+}
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  font-size: var(--24px);
+  margin: auto;
+  font-weight: 600;
+  padding: 0 var(--48px);
+  color: var(--color-text);
+  height: var(--192px);
+  z-index: 1;
+}
+.link {
+  color: var(--color-highlight);
+  text-decoration: underline;
+}
+.link:hover {
+  color: var(--color-text);
+}
+@media only screen and (max-width: 1000px) {
+  .linkContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .footer {
+    justify-content: flex-end;
+    height: auto;
+  }
+}
