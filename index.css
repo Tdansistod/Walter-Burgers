@@ -320,10 +320,6 @@ html.is-rendering .transition-slideIn {
     font-size: var(--32px);
   }
 }
-.textBackground2 {
-  background-color: var(--color-highlight);
-  color: black;
-}
 /* Menu */
 .menu {
   display: flex;
@@ -419,6 +415,7 @@ html.is-rendering .transition-slideIn {
   font-weight: 400;
   margin: 0;
   width: 40%;
+  opacity: 0.8;
 }
 .dialogDescription .button {
   position: absolute;
@@ -432,15 +429,8 @@ html.is-rendering .transition-slideIn {
   flex-wrap: wrap;
   width: 100%;
   color: var(--color-text);
-  background-color: black;
   padding: var(--64px) 0;
   gap: var(--64px);
-}
-.menuTitle2 {
-  background-color: black;
-  padding: var(--16px) var(--64px);
-  border-radius: var(--32px) var(--32px) 0 0;
-  margin-bottom: 0;
 }
 .atropos-inner {
   border-radius: var(--64px);
