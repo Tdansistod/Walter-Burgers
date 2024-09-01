@@ -29,12 +29,12 @@
         <h1 class="heroTitle">BURGER</h1>
         <div class="imgAndTextContainer">
           <div class="imgContainer">
-            <img class="heroImg" src="./img/hero.png" alt="Burger" />
+            <img class="heroImg" src="./img/Mega.png" alt="Burger" />
             <span class="imgShadow"></span>
             <span class="imgText">Mega</span>
           </div>
           <div class="textContainer">
-            <p class="heroSubtitle">¡2x1 en Classic Burgers!</p>
+            <p class="heroSubtitle">¡2x1 en Combos Mega Burger!</p>
             <a href="/#menu">
               <button class="button">Ver Menú ➤</button>
             </a>
@@ -47,58 +47,311 @@
         </div>
       </div>
       <div class="menu" id="menu">
-        <h2>Promociones</h2>
-        <div
-          class="atropos myAtropos menuCard"
-          onclick="document.getElementById('mega').showModal();"
-        >
-          <div class="atropos-scale">
-            <div class="atropos-rotate">
-              <div class="atropos-inner">
-                <h3 class="itemTitle">Combo Mega</h3>
-                <p class="itemDiscount">2x1</p>
-                <img
-                  class="soda"
-                  src="./img/soda.png"
-                  alt="bebida"
-                  data-atropos-offset="-5"
-                />
+        <h2 class="menuTitle">Promociones</h2>
+        <div class="promoContainer">
+          <div
+            class="atropos myAtropos"
+            onclick="document.getElementById('mega').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <div class="card">
+                    <h3 class="itemTitle">Mega Burger</h3>
+                    <p class="itemDiscount">2x1</p>
+                    <img
+                      class="soda"
+                      src="./img/Soda.png"
+                      alt="bebida"
+                      data-atropos-offset="-5"
+                    />
 
-                <img class="hamburger" src="./img/Hero.png" />
-                <img
-                  class="fries"
-                  src="./img/fries.png"
-                  alt="papas fritas"
-                  data-atropos-offset="-5"
-                />
+                    <img class="burger" src="./img/Mega.png" />
+                    <img
+                      class="fries"
+                      src="./img/Fries.png"
+                      alt="papas fritas"
+                      data-atropos-offset="-5"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <dialog id="mega" class="dialogDescription">
-          <h4 class="brand">Combo Mega</h4>
-          <div class="dialogContent">
-            <img src="./img/Hero.png" alt="hamburguesa" />
-            <p class="dialogText">
-              Esta creación comienza con una jugosa mezcla de carne vacuna y
-              pollo, perfectamente sazonada y a la parrilla.<br /><br />La
-              hamburguesa se enriquece con una generosa capa de queso cheddar
-              fundido, cada bocado se complementa con crujiente panceta, que
-              aporta un toque salado y una textura crujiente en contraste con la
-              suavidad de la carne.<br /><br />La frescura de la lechuga y el
-              tomate, junto con la cebolla caramelizada, proporcionan un balance
-              perfecto entre frescura y dulzura. Todo esto se une con una suave
-              y rica mayonesa que realza cada ingrediente con su cremosidad.
-              Servida en un pan artesanal ligeramente tostado.
-            </p>
-          </div>
-          <button
-            class="button"
-            onclick="document.getElementById('mega').close();"
+          <dialog id="mega" class="dialogDescription">
+            <h4 class="brand">Mega Burger</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/Mega.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                Esta creación comienza con una jugosa mezcla de carne vacuna y
+                pollo, perfectamente sazonada y a la parrilla.<br /><br />La
+                hamburguesa se enriquece con una generosa capa de queso cheddar
+                fundido, cada bocado se complementa con crujiente panceta, que
+                aporta un toque salado y una textura crujiente en contraste con
+                la suavidad de la carne.<br /><br />La frescura de la lechuga y
+                el tomate, junto con la cebolla caramelizada, proporcionan un
+                balance perfecto entre frescura y dulzura. Todo esto se une con
+                una suave y rica mayonesa que realza cada ingrediente con su
+                cremosidad. Servida en un pan artesanal ligeramente tostado.
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('mega').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+          <div
+            class="atropos myAtropos2"
+            onclick="document.getElementById('chef').showModal();"
           >
-            Volver
-          </button>
-        </dialog>
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <div class="card">
+                    <h3 class="itemTitle">Combo Clásico del Chef</h3>
+                    <p class="itemDiscount">25% OFF</p>
+                    <img
+                      class="soda"
+                      src="./img/Soda.png"
+                      alt="bebida"
+                      data-atropos-offset="-5"
+                    />
+
+                    <img class="burger" src="./img/Chef.png" />
+                    <img
+                      class="fries"
+                      src="./img/Fries.png"
+                      alt="papas fritas"
+                      data-atropos-offset="-5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="chef" class="dialogDescription">
+            <h4 class="brand">Clásico del Chef</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/Chef.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                Esta creación comienza con una jugosa mezcla de carne vacuna
+                perfectamente sazonada y a la parrilla.<br /><br />La
+                hamburguesa se enriquece con una generosa capa de queso cheddar
+                fundido, cada bocado se complementa con crujiente panceta, que
+                aporta un toque salado y una textura crujiente en contraste con
+                la suavidad de la carne.<br /><br />La frescura de la lechuga y
+                el tomate proporcionan un balance perfecto entre frescura y
+                dulzura. Servida en un pan artesanal ligeramente tostado.
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('chef').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+        </div>
+        <h2 class="menuTitle menuTitle2">Hamburguesas</h2>
+        <div class="burgersContainer">
+          <div
+            class="atropos myAtropos3"
+            onclick="document.getElementById('BBQ').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <h3 class="burgerTitle">BBQ Supremo</h3>
+                  <div class="card-burger">
+                    <img class="burgerBackground" src="./img/BBQ.jpeg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="BBQ" class="dialogDescription">
+            <h4 class="brand">BBQ Supremo</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/BBQ-noBackground.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                Jugosa hamburguesa, cocinada a la perfección, se encuentra con
+                una salsa barbacoa casera que aporta un toque ahumado y dulce
+                irresistible.<br /><br />Añadimos cebolla caramelizada para un
+                contraste exquisito de sabores, mientras que el queso cheddar
+                derretido envuelve cada bocado en una cremosidad inigualable.
+                <br /><br />Para coronar esta experiencia, aros de cebolla
+                crujientes añaden un toque crujiente y sabroso. Cada mordida es
+                una fiesta de sabores y texturas que te hará volver por más.
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('BBQ').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+          <div
+            class="atropos myAtropos4"
+            onclick="document.getElementById('Mediterranean').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <h3 class="burgerTitle">Mediterránea</h3>
+                  <div class="card-burger">
+                    <img
+                      class="burgerBackground"
+                      src="./img/Mediterranean.jpeg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="Mediterranean" class="dialogDescription">
+            <h4 class="brand">Mediterránea</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/Mediterranean-noBackground.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                ¡Deléitate con una hamburguesa fresca y llena de sabor que te
+                transportará directamente al Mediterráneo!<br /><br />
+                Nuestra hamburguesa está acompañada de una suave y cremosa salsa
+                tzatziki, que combina a la perfección con el sabor jugoso de la
+                carne. Las aceitunas verdes y negras añaden un toque salado y
+                auténtico, mientras que la cebolla morada y el tomate fresco
+                aportan un crujido y frescura inigualables.<br /><br />
+                Cada bocado es una explosión de sabores vibrantes y texturas
+                contrastantes que elevarán tu experiencia gastronómica a otro
+                nivel.
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('Mediterranean').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+          <div
+            class="atropos myAtropos5"
+            onclick="document.getElementById('Mexican').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <h3 class="burgerTitle">Mexicana</h3>
+                  <div class="card-burger">
+                    <img class="burgerBackground" src="./img/Mexicana.jpeg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="Mexican" class="dialogDescription">
+            <h4 class="brand">Mexicana</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/Mexicana-noBackground.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                ¡Embárcate en un viaje culinario a México con nuestra
+                hamburguesa inspirada en auténticos sabores mexicanos!<br /><br />
+                Disfruta de una suculenta carne sazonada con especias mexicanas,
+                que ofrece un perfil de sabor vibrante. Cubierta con queso
+                manchego fundido, esta hamburguesa se convierte en una
+                experiencia indulgente y cremosa.<br /><br />La adición de
+                guacamole fresco proporciona una textura suave y un toque de
+                frescura, mientras que la salsa fresca de tomate y cilantro
+                eleva cada bocado con su sabor picante y refrescante. Y para un
+                toque crujiente y divertido, hemos incluido totopos crujientes
+                que complementan perfectamente la riqueza de la hamburguesa.<br /><br />
+                ¡Cada mordida es una explosión de auténticos sabores mexicanos
+                que te hará querer más!
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('Mexican').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+          <div
+            class="atropos myAtropos6"
+            onclick="document.getElementById('spicy').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <h3 class="burgerTitle">Picante Extremo</h3>
+                  <div class="card-burger">
+                    <img
+                      class="burgerBackground"
+                      src="./img/Extreme Spicy.jpeg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="spicy" class="dialogDescription">
+            <h4 class="brand">Picante Extremo</h4>
+            <div class="dialogContent">
+              <img
+                src="./img/Extreme Spicy-noBackground.png"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                ¡Prepárate para una explosión de sabores y un toque picante con
+                nuestra hamburguesa más atrevida!<br /><br />
+                Esta delicia comienza con una jugosa hamburguesa perfectamente
+                cocinada, complementada con queso pepper jack que se derrite en
+                cada bocado.<br /><br />Los jalapeños frescos añaden un nivel de
+                picante justo a tu gusto, mientras que la salsa picante realza
+                el calor con una mezcla de especias audaces. Para equilibrar el
+                fuego, el guacamole suave y cremoso ofrece una frescura
+                refrescante y una textura rica.<br /><br />
+                ¡Una combinación perfecta para los amantes del picante y los
+                sabores intensos! Ven y disfruta de esta hamburguesa que eleva
+                el picante a otro nivel y deja que tu paladar se aventure en una
+                experiencia inolvidable.
+              </p>
+            </div>
+            <button
+              class="button"
+              onclick="document.getElementById('spicy').close();"
+            >
+              Volver
+            </button>
+          </dialog>
+        </div>
+      </div>
+      <div class="textBackground textBackground2">
+        <div class="textRow">
+          <span class="word"></span>
+        </div>
       </div>
       <footer class="footer">
         <h1 class="brand">Walter Burgers</h1>
@@ -135,13 +388,23 @@
       //swup hooks
       setStyle();
       const setAtropos = () => {
-        const myAtropos = Atropos({
+        const config = {
           el: ".myAtropos",
-          shadow: true,
           highlight: false,
           rotateXMax: 10,
           rotateYMax: 10,
-        });
+        };
+        const config2 = {
+          el: ".myAtropos",
+          rotateXMax: 10,
+          rotateYMax: 10,
+        };
+        Atropos(config);
+        Atropos({ ...config, el: ".myAtropos2" });
+        Atropos({ ...config2, el: ".myAtropos3" });
+        Atropos({ ...config2, el: ".myAtropos4" });
+        Atropos({ ...config2, el: ".myAtropos5" });
+        Atropos({ ...config2, el: ".myAtropos6" });
       };
       setAtropos();
       swup.hooks.on("page:view", (visit) => {

@@ -265,97 +265,6 @@ html.is-rendering .transition-slideIn {
     font-size: var(--40px);
   }
 }
-/* Menu */
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text);
-  background-color: var(--color-main);
-  height: 100vh;
-}
-.menu h2 {
-  margin: 0;
-}
-.menuCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: var(--64px);
-  border: 2px solid var(--color-text);
-  padding: var(--16px);
-  overflow: hidden;
-  cursor: pointer;
-}
-.itemTitle {
-  font-size: var(--48px);
-  font-family: "Brand";
-  margin: 0;
-}
-.atropos-shadow {
-  background-color: rgba(0, 0, 0, 0.356) !important;
-  position: relative !important;
-  margin-top: -70px;
-  height: 100px !important;
-  border-radius: 50%;
-}
-.atropos-inner {
-  overflow: visible !important;
-}
-.itemDiscount {
-  font-size: var(--32px);
-  font-family: "Main";
-  font-weight: 600;
-  margin: 0;
-}
-.hamburger {
-  height: 250px;
-  width: auto;
-  position: relative;
-  z-index: 1;
-  margin: 0 -150px;
-  margin-bottom: -40px;
-}
-.soda {
-  height: 450px;
-}
-.fries {
-  height: 350px;
-}
-.dialogDescription {
-  background-color: transparent;
-  border-radius: var(--16px);
-  text-align: left;
-  border: none;
-}
-.dialogDescription .brand {
-  margin: 0;
-  font-size: var(--48px);
-}
-.dialogDescription::backdrop {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.dialogContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: var(--48px);
-}
-.dialogText {
-  color: var(--color-highlight);
-  font-size: var(--24px);
-  font-weight: 400;
-  margin: 0;
-  width: 40%;
-}
-.dialogDescription .button {
-  position: absolute;
-  top: 0;
-  left: var(--64px);
-}
 /* text slide */
 .textBackground {
   display: flex;
@@ -410,6 +319,153 @@ html.is-rendering .transition-slideIn {
   .textRow {
     font-size: var(--32px);
   }
+}
+.textBackground2 {
+  background-color: var(--color-highlight);
+  color: black;
+}
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background-color: var(--color-main);
+  padding: var(--64px) 0 0 0;
+}
+.promoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--64px);
+  width: 100%;
+}
+.menuTitle {
+  font-size: var(--32px);
+  font-weight: 600;
+  margin-top: var(--96px);
+  margin-bottom: var(--48px);
+}
+.card {
+  cursor: pointer;
+  overflow: visible !important;
+  border-radius: var(--64px);
+  border: 2px solid var(--color-text);
+  padding: var(--16px);
+  padding-bottom: var(--48px);
+}
+.itemTitle {
+  font-size: var(--48px);
+  font-family: "Brand";
+  margin: 0;
+}
+.itemDiscount {
+  font-size: var(--32px);
+  font-family: "Main";
+  font-weight: 600;
+  margin: 0;
+}
+.burger {
+  height: 250px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+  margin: 0 -150px;
+  margin-bottom: calc(-1 * var(--48px));
+}
+.soda {
+  height: 450px;
+}
+.fries {
+  height: 350px;
+}
+.atropos-shadow {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  position: relative !important;
+  margin-top: -70px;
+  height: 100px !important;
+  border-radius: 50%;
+  display: none !important;
+}
+.dialogDescription {
+  background-color: transparent;
+  border-radius: var(--16px);
+  text-align: left;
+  border: none;
+}
+.dialogDescription .brand {
+  margin: 0;
+  font-size: var(--48px);
+}
+.dialogDescription::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.dialogContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: var(--48px);
+}
+.dialogBurger {
+  height: 600px;
+  width: auto;
+}
+.dialogText {
+  color: var(--color-highlight);
+  font-size: var(--24px);
+  font-weight: 400;
+  margin: 0;
+  width: 40%;
+}
+.dialogDescription .button {
+  position: absolute;
+  top: 0;
+  left: var(--64px);
+}
+.burgersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  color: var(--color-text);
+  background-color: black;
+  padding: var(--64px) 0;
+  gap: var(--64px);
+}
+.menuTitle2 {
+  background-color: black;
+  padding: var(--16px) var(--64px);
+  border-radius: var(--32px) var(--32px) 0 0;
+  margin-bottom: 0;
+}
+.atropos-inner {
+  border-radius: var(--64px);
+}
+.card-burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--64px);
+  overflow: hidden;
+  width: 550px;
+  height: 600px;
+}
+.burgerTitle {
+  z-index: 1;
+  font-size: var(--48px);
+  font-family: "Brand";
+  margin: 0;
+}
+.burgerBackground {
+  position: relative;
+  height: 100%;
+  width: auto;
 }
 /* About */
 .about {
