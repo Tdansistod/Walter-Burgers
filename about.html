@@ -23,6 +23,42 @@
         <a href="/" id="home" class="navItem">Home</a>
         <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
       </div>
+      <div class="navMobile">
+        <input type="checkbox" id="navMenu" />
+        <ul class="navMenu">
+          <li>
+            <a href="/">
+              <img
+                src="./img/home icon.svg"
+                alt="home icon"
+                title="Inicio"
+                height="auto"
+                width="auto"
+                loading="eager"
+              />
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="/about.html">
+              <img
+                src="./img/about icon.svg"
+                alt="about icon"
+                title="Sobre Nosotros"
+                height="auto"
+                width="auto"
+                loading="eager"
+              />
+              Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+        <label for="navMenu" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
     </nav>
     <main id="swup">
       <div class="about">
@@ -71,7 +107,7 @@
       //swup
       const swup = new Swup();
       //atropos
-      import Atropos from "./atropos.min.mjs";
+      import Atropos from "./atropos.min.js";
       //dinamic style nav
       const setStyle = (url = window.location.pathname) => {
         url === "/"
@@ -95,6 +131,7 @@
       swup.hooks.on("page:view", (visit) => {
         setStyle(visit.to.url);
         if (visit.to.url === "/") setAtropos();
+        document.getElementById("navMenu").checked = false;
       });
     </script>
   </body>

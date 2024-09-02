@@ -23,15 +23,53 @@
         <a href="/" id="home" class="navItem">Home</a>
         <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
       </div>
+      <div class="navMobile">
+        <input type="checkbox" id="navMenu" />
+        <ul class="navMenu">
+          <li>
+            <a href="/">
+              <img
+                src="./img/home icon.svg"
+                alt="home icon"
+                title="Inicio"
+                height="auto"
+                width="auto"
+                loading="eager"
+              />
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="/about.html">
+              <img
+                src="./img/about icon.svg"
+                alt="about icon"
+                title="Sobre Nosotros"
+                height="auto"
+                width="auto"
+                loading="eager"
+              />
+              Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+        <label for="navMenu" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
     </nav>
     <main id="swup">
       <div class="heroSection">
-        <h1 class="heroTitle">BURGER</h1>
+        <div class="heroTitleContainer">
+          <h1 class="megaText">Mega</h1>
+          <h1 class="heroTitle">BURGER</h1>
+        </div>
         <div class="imgAndTextContainer">
           <div class="imgContainer">
             <img class="heroImg" src="./img/Mega.png" alt="Burger" />
             <span class="imgShadow"></span>
-            <span class="imgText">Mega</span>
           </div>
           <div class="textContainer">
             <p class="heroSubtitle">¡2x1 en Combos Mega Burger!</p>
@@ -79,7 +117,15 @@
             </div>
           </div>
           <dialog id="mega" class="dialogDescription">
-            <h4 class="brand">Mega Burger</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('mega').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Mega Burger</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Mega.png"
@@ -99,12 +145,6 @@
                 cremosidad. Servida en un pan artesanal ligeramente tostado.
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('mega').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos2"
@@ -136,7 +176,15 @@
             </div>
           </div>
           <dialog id="chef" class="dialogDescription">
-            <h4 class="brand">Clásico del Chef</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('chef').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Clásico del Chef</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Chef.png"
@@ -154,12 +202,6 @@
                 dulzura. Servida en un pan artesanal ligeramente tostado.
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('chef').close();"
-            >
-              Volver
-            </button>
           </dialog>
         </div>
         <h2 class="menuTitle">Hamburguesas</h2>
@@ -180,7 +222,15 @@
             </div>
           </div>
           <dialog id="bbq" class="dialogDescription">
-            <h4 class="brand">BBQ Supremo</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('bbq').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">BBQ Supremo</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/BBQ-noBackground.png"
@@ -198,12 +248,6 @@
                 una fiesta de sabores y texturas que te hará volver por más.
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('bbq').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos4"
@@ -224,7 +268,15 @@
             </div>
           </div>
           <dialog id="mediterranean" class="dialogDescription">
-            <h4 class="brand">Mediterránea</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('mediterranean').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Mediterránea</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Mediterranean-noBackground.png"
@@ -244,12 +296,6 @@
                 nivel.
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('mediterranean').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos5"
@@ -267,7 +313,15 @@
             </div>
           </div>
           <dialog id="mexican" class="dialogDescription">
-            <h4 class="brand">Mexicana</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('mexican').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Mexicana</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Mexicana-noBackground.png"
@@ -290,12 +344,6 @@
                 que te hará querer más!
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('mexican').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos6"
@@ -316,7 +364,15 @@
             </div>
           </div>
           <dialog id="spicy" class="dialogDescription">
-            <h4 class="brand">Picante Extremo</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('spicy').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Picante Extremo</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Extreme Spicy-noBackground.png"
@@ -339,12 +395,6 @@
                 experiencia inolvidable.
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('spicy').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos7"
@@ -365,7 +415,15 @@
             </div>
           </div>
           <dialog id="veggie" class="dialogDescription">
-            <h4 class="brand">Vegetariana</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('veggie').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Vegetariana</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Extreme Spicy-noBackground.png"
@@ -387,12 +445,6 @@
                 y la salud se encuentran en cada bocado!
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('veggie').close();"
-            >
-              Volver
-            </button>
           </dialog>
           <div
             class="atropos myAtropos8"
@@ -413,7 +465,15 @@
             </div>
           </div>
           <dialog id="tropical" class="dialogDescription">
-            <h4 class="brand">Tropical</h4>
+            <div class="dialogTitleContainer">
+              <button
+                class="button"
+                onclick="document.getElementById('tropical').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Tropical</h4>
+            </div>
             <div class="dialogContent">
               <img
                 src="./img/Extreme Spicy-noBackground.png"
@@ -436,59 +496,6 @@
                 única e inolvidable!
               </p>
             </div>
-            <button
-              class="button"
-              onclick="document.getElementById('tropical').close();"
-            >
-              Volver
-            </button>
-          </dialog>
-          <div
-            class="atropos myAtropos9"
-            onclick="document.getElementById('truffled').showModal();"
-          >
-            <div class="atropos-scale">
-              <div class="atropos-rotate">
-                <div class="atropos-inner">
-                  <h3 class="burgerTitle">Trufada</h3>
-                  <div class="card-burger">
-                    <img
-                      class="burgerBackground"
-                      src="./img/Extreme Spicy.jpeg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <dialog id="truffled" class="dialogDescription">
-            <h4 class="brand">Trufada</h4>
-            <div class="dialogContent">
-              <img
-                src="./img/Extreme Spicy-noBackground.png"
-                class="dialogBurger"
-                alt="hamburguesa"
-              />
-              <p class="dialogText">
-                ¡Descubre nuestra Hamburguesa Gourmet, una experiencia culinaria
-                que combina elegancia y sabor en cada bocado!<br /><br />
-                Imagina una suculenta hamburguesa de res, coronada con un queso
-                trufado que derrite su aroma delicado y su sabor sofisticado
-                sobre la carne. Los champiñones salteados, tiernos y sabrosos,
-                aportan una textura rica.<br /><br />La cebolla caramelizada,
-                con su dulzura profunda y su textura suave, completa esta obra
-                maestra con un contraste perfecto. Todo esto se ensambla en un
-                pan artesanal recién horneado que realza cada ingrediente.<br /><br />
-                ¡Ven y disfruta de un festín que redefine lo que una hamburguesa
-                puede ser!
-              </p>
-            </div>
-            <button
-              class="button"
-              onclick="document.getElementById('truffled').close();"
-            >
-              Volver
-            </button>
           </dialog>
         </div>
       </div>
@@ -519,7 +526,7 @@
       //swup
       const swup = new Swup();
       //atropos
-      import Atropos from "./atropos.min.mjs";
+      import Atropos from "./atropos.min.js";
       //dinamic style nav
       const setStyle = (url = window.location.pathname) => {
         url === "/"
@@ -532,6 +539,7 @@
       //swup hooks
       setStyle();
       const setAtropos = () => {
+        if (navigator.userAgentData.mobile) return;
         const config = {
           el: ".myAtropos",
           highlight: false,
@@ -551,12 +559,12 @@
         Atropos({ ...config2, el: ".myAtropos6" });
         Atropos({ ...config2, el: ".myAtropos7" });
         Atropos({ ...config2, el: ".myAtropos8" });
-        Atropos({ ...config2, el: ".myAtropos9" });
       };
       setAtropos();
       swup.hooks.on("page:view", (visit) => {
         setStyle(visit.to.url);
         if (visit.to.url === "/") setAtropos();
+        document.getElementById("navMenu").checked = false;
       });
     </script>
   </body>
