@@ -260,13 +260,12 @@ html.is-rendering .transition-slideIn {
   justify-content: center;
   place-content: center;
   justify-items: center;
-  gap: 3rem;
+  gap: 1rem;
   grid-template-areas: "title" "img" "text" "button";
   background-color: var(--color-main);
   max-width: 1920px;
   margin-inline: auto;
-  height: calc(100vh - 4rem - 5rem);
-  height: calc(100svh - 4rem - 5rem);
+  height: calc(100svh - 5rem);
   max-height: 1200px;
 }
 .heroTitle {
@@ -302,7 +301,7 @@ html.is-rendering .transition-slideIn {
 }
 .heroSubtitle {
   grid-area: text;
-  font-size: var(--font-xlarge);
+  font-size: var(--font-medium);
   font-weight: 600;
   text-shadow: var(--shadow);
 }
@@ -318,7 +317,7 @@ html.is-rendering .transition-slideIn {
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   padding: 0.8rem 2rem;
   text-decoration: none;
   user-select: none;
@@ -337,6 +336,8 @@ html.is-rendering .transition-slideIn {
 }
 @media only screen and (min-width: 90rem) {
   .heroSection {
+    height: calc(100vh - 4rem - 5rem);
+    gap: 3rem;
     grid-template-areas:
       "title title"
       "img text"
@@ -519,7 +520,7 @@ html.is-rendering .transition-slideIn {
 .dialogText {
   grid-area: text;
   color: var(--color-highlight);
-  font-size: var(--font-medium);
+  font-size: var(--font-smaller);
   font-weight: 400;
   margin: 0;
   width: 100%;
