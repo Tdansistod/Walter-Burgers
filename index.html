@@ -62,29 +62,23 @@
     </nav>
     <main id="swup">
       <div class="heroSection">
-        <div class="heroTitleContainer">
-          <h1 class="megaText">Mega</h1>
-          <h1 class="heroTitle">BURGER</h1>
+        <h1 class="heroTitle">
+          <span class="megaText">Mega</span
+          ><span class="burgerText">BURGER</span>
+        </h1>
+        <div class="imgContainer">
+          <img class="heroImg" src="./img/Mega.png" alt="Burger" />
+          <div class="imgShadow"></div>
         </div>
-        <div class="imgAndTextContainer">
-          <div class="imgContainer">
-            <img class="heroImg" src="./img/Mega.png" alt="Burger" />
-            <span class="imgShadow"></span>
-          </div>
-          <div class="textContainer">
-            <p class="heroSubtitle">¡2x1 en Combos Mega Burger!</p>
-            <a href="/#menu">
-              <button class="button">Ver Menú ➤</button>
-            </a>
-          </div>
-        </div>
+        <p class="heroSubtitle">¡2x1 en Combos Mega Burger!</p>
+        <a href="/#menu" class="button">Ver Menú ➤</a>
       </div>
       <div class="textBackground">
         <div class="textRow">
           <span class="word"></span>
         </div>
       </div>
-      <div class="menu" id="menu">
+      <div id="menu">
         <h2 class="menuTitle">Promociones</h2>
         <div class="promoContainer">
           <div
@@ -117,7 +111,7 @@
             </div>
           </div>
           <dialog id="mega" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('mega').close();"
@@ -125,8 +119,6 @@
                 Volver
               </button>
               <h4 class="brand">Mega Burger</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Mega.png"
                 class="dialogBurger"
@@ -154,7 +146,7 @@
               <div class="atropos-rotate">
                 <div class="atropos-inner">
                   <div class="card">
-                    <h3 class="itemTitle">Combo Clásico del Chef</h3>
+                    <h3 class="itemTitle">Clásico del Chef</h3>
                     <p class="itemDiscount">25% OFF</p>
                     <img
                       class="soda"
@@ -176,7 +168,7 @@
             </div>
           </div>
           <dialog id="chef" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('chef').close();"
@@ -184,8 +176,6 @@
                 Volver
               </button>
               <h4 class="brand">Clásico del Chef</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Chef.png"
                 class="dialogBurger"
@@ -222,7 +212,7 @@
             </div>
           </div>
           <dialog id="bbq" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('bbq').close();"
@@ -230,8 +220,6 @@
                 Volver
               </button>
               <h4 class="brand">BBQ Supremo</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/BBQ-noBackground.png"
                 class="dialogBurger"
@@ -268,7 +256,7 @@
             </div>
           </div>
           <dialog id="mediterranean" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('mediterranean').close();"
@@ -276,8 +264,6 @@
                 Volver
               </button>
               <h4 class="brand">Mediterránea</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Mediterranean-noBackground.png"
                 class="dialogBurger"
@@ -313,7 +299,7 @@
             </div>
           </div>
           <dialog id="mexican" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('mexican').close();"
@@ -321,8 +307,6 @@
                 Volver
               </button>
               <h4 class="brand">Mexicana</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Mexicana-noBackground.png"
                 class="dialogBurger"
@@ -364,7 +348,7 @@
             </div>
           </div>
           <dialog id="spicy" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('spicy').close();"
@@ -372,8 +356,6 @@
                 Volver
               </button>
               <h4 class="brand">Picante Extremo</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Extreme Spicy-noBackground.png"
                 class="dialogBurger"
@@ -412,7 +394,7 @@
             </div>
           </div>
           <dialog id="veggie" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('veggie').close();"
@@ -420,8 +402,6 @@
                 Volver
               </button>
               <h4 class="brand">Vegetariana</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Vegetarian-noBackground.png"
                 class="dialogBurger"
@@ -459,7 +439,7 @@
             </div>
           </div>
           <dialog id="tropical" class="dialogDescription">
-            <div class="dialogTitleContainer">
+            <div class="dialogContent">
               <button
                 class="button"
                 onclick="document.getElementById('tropical').close();"
@@ -467,8 +447,6 @@
                 Volver
               </button>
               <h4 class="brand">Tropical</h4>
-            </div>
-            <div class="dialogContent">
               <img
                 src="./img/Tropical-noBackground.png"
                 class="dialogBurger"
