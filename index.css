@@ -368,7 +368,7 @@ html.is-rendering .transition-slideIn {
   animation: slide 20s linear alternate infinite;
 }
 .word:after {
-  content: "Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers •";
+  content: "Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers • Walter Burgers •";
 }
 
 @-webkit-keyframes slide {
@@ -389,11 +389,6 @@ html.is-rendering .transition-slideIn {
   100% {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-  }
-}
-@media only screen and (max-width: 700px) {
-  .textRow {
-    font-size: var(--font-medium);
   }
 }
 /* Menu */
