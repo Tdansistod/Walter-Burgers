@@ -53,12 +53,11 @@ input:-webkit-autofill:active {
   --font-small: 1.25rem;
   --font-medium: 1.5rem;
   --font-large: 1.75rem;
-  --font-xlarge: 2rem;
 }
 @media only screen and (min-width: 700px) {
   :root {
     --font-smaller: 1.3rem;
-    --font-xlarge: 3rem;
+    --font-large: 3rem;
   }
 }
 body::-webkit-scrollbar {
@@ -72,12 +71,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--color-text);
   border-radius: var(--16px);
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--color-4) var(--color-3);
-  }
 }
 p {
   font-size: var(--font-smaller);
@@ -126,7 +119,7 @@ html.is-rendering .transition-slideIn {
 }
 .brand {
   font-family: "Brand";
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   text-shadow: var(--shadow);
   font-weight: 400;
 }
@@ -301,7 +294,7 @@ html.is-rendering .transition-slideIn {
 }
 .heroSubtitle {
   grid-area: text;
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   font-weight: 600;
   text-shadow: var(--shadow);
 }
@@ -367,7 +360,7 @@ html.is-rendering .transition-slideIn {
 .textRow {
   display: flex;
   justify-content: center;
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: 600;
   text-transform: uppercase;
   width: 12rem;
@@ -410,10 +403,11 @@ html.is-rendering .transition-slideIn {
   overflow-x: clip;
   gap: 5rem;
   padding: 0 1rem;
+  padding-bottom: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
 }
 .menuTitle {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   margin-top: 6rem;
   margin-bottom: 4rem;
 }
@@ -426,12 +420,12 @@ html.is-rendering .transition-slideIn {
   padding-bottom: 3rem;
 }
 .itemTitle {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   font-family: "Brand";
   margin: 0;
 }
 .itemDiscount {
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-family: "Main";
   text-align: center;
 }
@@ -462,6 +456,7 @@ html.is-rendering .transition-slideIn {
   display: grid;
   justify-content: center;
   padding: 5rem 1rem;
+  padding-top: 0;
   gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
 }
@@ -477,7 +472,7 @@ html.is-rendering .transition-slideIn {
 }
 .burgerTitle {
   z-index: 1;
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   font-family: "Brand";
   margin: 0;
 }
@@ -511,7 +506,7 @@ html.is-rendering .transition-slideIn {
 .dialogContent .brand {
   grid-area: title;
   margin: 0;
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
 }
 .dialogBurger {
   grid-area: img;
@@ -539,7 +534,7 @@ html.is-rendering .transition-slideIn {
   padding: 2rem;
 }
 .aboutTitle {
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
 }
 /* Footer */
 .footer {
