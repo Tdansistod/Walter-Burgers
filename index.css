@@ -61,7 +61,7 @@ input:-webkit-autofill:active {
   }
 }
 body::-webkit-scrollbar {
-  width: var(--16px);
+  width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -70,7 +70,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--color-text);
-  border-radius: var(--16px);
 }
 p {
   font-size: var(--font-smaller);
