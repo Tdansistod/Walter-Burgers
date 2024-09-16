@@ -48,14 +48,14 @@
   </head>
   <body>
     <div class="transition-slideIn"></div>
-    <nav class="navBar">
+    <header class="navBar">
       <h1 class="brand">Walter Burgers</h1>
-      <div class="nav">
+      <nav class="nav">
         <a href="/" id="home" class="navItem">Home</a>
         <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
-      </div>
-      <div class="navMobile">
-        <input type="checkbox" id="navMenu" />
+      </nav>
+      <nav class="navMobile">
+        <input type="checkbox" id="navButton" />
         <ul class="navMenu">
           <li>
             <a href="/">
@@ -84,13 +84,13 @@
             </a>
           </li>
         </ul>
-        <label for="navMenu" class="hamburger">
+        <label for="navButton" class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </label>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main id="swup">
       <div class="heroSection">
         <h1 class="heroTitle">
@@ -533,14 +533,14 @@
       //dinamic style nav
       const setStyle = (url = window.location.pathname) => {
         url === "/"
-          ? document.getElementById("home").classList.add("active")
-          : document.getElementById("home").classList.remove("active");
+          ? document.getElementById("home")?.classList.add("active")
+          : document.getElementById("home")?.classList.remove("active");
         url === "/about.html"
-          ? document.getElementById("about").classList.add("active")
-          : document.getElementById("about").classList.remove("active");
+          ? document.getElementById("about")?.classList.add("active")
+          : document.getElementById("about")?.classList.remove("active");
       };
-      //swup hooks
       setStyle();
+
       const setAtropos = () => {
         if (navigator.userAgentData.mobile) return;
         const config = {
@@ -564,10 +564,12 @@
         Atropos({ ...config2, el: ".myAtropos8" });
       };
       setAtropos();
+
+      //swup hooks
       swup.hooks.on("page:view", (visit) => {
         setStyle(visit.to.url);
         if (visit.to.url === "/") setAtropos();
-        document.getElementById("navMenu").checked = false;
+        document.getElementById("navButton").checked = false;
       });
     </script>
   </body>

@@ -296,6 +296,7 @@ html.is-rendering .transition-slideIn {
   font-size: var(--font-large);
   font-weight: 600;
   text-shadow: var(--shadow);
+  text-align: center;
 }
 .button {
   grid-area: button;
