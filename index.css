@@ -398,11 +398,15 @@ html.is-rendering .transition-slideIn {
 .promoContainer {
   display: grid;
   justify-content: center;
+  place-items: center;
   overflow-x: clip;
-  gap: 5rem;
   padding: 0 1rem;
   padding-bottom: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+}
+.promoContainer .atropos {
+  margin-top: 4rem;
+  max-width: 30rem;
 }
 .menuTitle {
   font-size: var(--font-large);
@@ -427,11 +431,17 @@ html.is-rendering .transition-slideIn {
   font-family: "Main";
   text-align: center;
 }
-.burger {
+.burger,
+.burgerVideo {
   width: 50%;
   position: relative;
   z-index: 1;
   margin: 0 -20%;
+  margin-bottom: -3rem;
+}
+.burgerVideo {
+  width: 65%;
+  margin: 0 -30%;
   margin-bottom: -3rem;
 }
 .soda {
@@ -452,11 +462,16 @@ html.is-rendering .transition-slideIn {
 /* Burgers */
 .burgersContainer {
   display: grid;
-  justify-content: center;
+  justify-content: space-around;
+  place-items: center;
   padding: 5rem 1rem;
   padding-top: 0;
-  gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+}
+.burgersContainer .atropos {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 25rem;
 }
 .atropos-inner {
   border-radius: 4rem;

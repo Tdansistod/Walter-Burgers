@@ -224,11 +224,77 @@
               </p>
             </div>
           </dialog>
+          <div
+            class="atropos myAtropos3"
+            onclick="document.getElementById('spicyPromo').showModal();"
+          >
+            <div class="atropos-scale">
+              <div class="atropos-rotate">
+                <div class="atropos-inner">
+                  <div class="card">
+                    <h3 class="itemTitle">Picante Extremo</h3>
+                    <p class="itemDiscount">25% OFF</p>
+                    <img
+                      class="soda"
+                      src="./img/Soda.webp"
+                      alt="bebida"
+                      data-atropos-offset="-5"
+                    />
+
+                    <video
+                      class="burgerVideo"
+                      src="./img/Spicy.webm"
+                      muted
+                      autoplay
+                      loop
+                    ></video>
+                    <img
+                      class="fries"
+                      src="./img/Fries.webp"
+                      alt="papas fritas"
+                      data-atropos-offset="-5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <dialog id="spicyPromo" class="dialogDescription">
+            <div class="dialogContent">
+              <button
+                class="button"
+                onclick="document.getElementById('spicyPromo').close();"
+              >
+                Volver
+              </button>
+              <h4 class="brand">Picante Extremo</h4>
+              <img
+                src="./img/Extreme Spicy-noBackground.webp"
+                class="dialogBurger"
+                alt="hamburguesa"
+              />
+              <p class="dialogText">
+                ¡Prepárate para una explosión de sabores y un toque picante con
+                nuestra hamburguesa más atrevida!<br /><br />
+                Esta delicia comienza con una jugosa hamburguesa perfectamente
+                cocinada, complementada con queso pepper jack que se derrite en
+                cada bocado.<br /><br />Los jalapeños frescos añaden un nivel de
+                picante justo a tu gusto, mientras que la salsa picante realza
+                el calor con una mezcla de especias audaces. Para equilibrar el
+                fuego, el guacamole suave y cremoso ofrece una frescura
+                refrescante y una textura rica.<br /><br />
+                ¡Una combinación perfecta para los amantes del picante y los
+                sabores intensos! Ven y disfruta de esta hamburguesa que eleva
+                el picante a otro nivel y deja que tu paladar se aventure en una
+                experiencia inolvidable.
+              </p>
+            </div>
+          </dialog>
         </div>
         <h2 class="menuTitle">Hamburguesas</h2>
         <div class="burgersContainer">
           <div
-            class="atropos myAtropos3"
+            class="atropos myAtropos4"
             onclick="document.getElementById('bbq').showModal();"
           >
             <div class="atropos-scale">
@@ -269,7 +335,7 @@
             </div>
           </dialog>
           <div
-            class="atropos myAtropos4"
+            class="atropos myAtropos5"
             onclick="document.getElementById('mediterranean').showModal();"
           >
             <div class="atropos-scale">
@@ -315,7 +381,7 @@
             </div>
           </dialog>
           <div
-            class="atropos myAtropos5"
+            class="atropos myAtropos6"
             onclick="document.getElementById('mexican').showModal();"
           >
             <div class="atropos-scale">
@@ -361,7 +427,7 @@
             </div>
           </dialog>
           <div
-            class="atropos myAtropos6"
+            class="atropos myAtropos7"
             onclick="document.getElementById('spicy').showModal();"
           >
             <div class="atropos-scale">
@@ -410,7 +476,7 @@
             </div>
           </dialog>
           <div
-            class="atropos myAtropos7"
+            class="atropos myAtropos8"
             onclick="document.getElementById('veggie').showModal();"
           >
             <div class="atropos-scale">
@@ -455,7 +521,7 @@
             </div>
           </dialog>
           <div
-            class="atropos myAtropos8"
+            class="atropos myAtropos9"
             onclick="document.getElementById('tropical').showModal();"
           >
             <div class="atropos-scale">
@@ -554,14 +620,15 @@
           rotateXMax: 10,
           rotateYMax: 10,
         };
-        Atropos(config);
+        Atropos(config); // atropos 1
         Atropos({ ...config, el: ".myAtropos2" });
-        Atropos({ ...config2, el: ".myAtropos3" });
+        Atropos({ ...config, el: ".myAtropos3" });
         Atropos({ ...config2, el: ".myAtropos4" });
         Atropos({ ...config2, el: ".myAtropos5" });
         Atropos({ ...config2, el: ".myAtropos6" });
         Atropos({ ...config2, el: ".myAtropos7" });
         Atropos({ ...config2, el: ".myAtropos8" });
+        Atropos({ ...config2, el: ".myAtropos9" });
       };
       setAtropos();
 
